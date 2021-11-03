@@ -5,6 +5,7 @@
 
 trigger:
 - master
+- lkr2
 
 pool:
   vmImage: 'ubuntu-latest'
