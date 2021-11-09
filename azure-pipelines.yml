@@ -24,7 +24,7 @@ steps:
 
 - task: PowerShell@2
   displayName: Powershell-Value check
-  condition: ne(variables[ 'ENV:sampletest' ], 'lokeshkumar')
+  condition: and(succeeded(), ne(variables[ 'ENV:sampletest' ], 'lokeshkumar'))
   inputs: 
     targetType: inline
     script: write-host("Checking")
