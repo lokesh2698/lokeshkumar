@@ -7,11 +7,24 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
-- task: ArchiveFiles@2
+- task: PowerShell@2
+  displayName: Powershell-Variable Creation
   inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
-- task: PublishBuildArtifacts@1
+    targetType: 'inline'
+    script: |
+      Write-Host "Hello World"
+                
+      $sampletest = "lokeshkumar"
+                
+      Write-Output "##vso[task.setvariable variable=SampleVariable;]$sampletest"
+
+- task: PowerShell@2
+  displayName: Powershell-Value check
+  condition: and(succeeded(), ne(variables['sampletest'], 'lokeshkumar'))
+  inputs: 
+    targetType: inline
+    script: write-host("Checking")
+    
