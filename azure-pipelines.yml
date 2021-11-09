@@ -14,7 +14,7 @@ steps:
   displayName: Powershell-Variable Creation
   inputs:
     targetType: 'inline'
-    script: |
+    script: 
       Write-Host "Hello World"
                 
       $sampletest = "lokeshkumar"
@@ -24,7 +24,7 @@ steps:
 
 - task: PowerShell@2
   displayName: Powershell-Value check
-  condition: ne(variables[ 'build.sampletest' ], 'lokeshkumar')
+  condition: ne(variables[ 'ENV:sampletest' ], 'lokeshkumar')
   inputs: 
     targetType: inline
     script: write-host("Checking")
