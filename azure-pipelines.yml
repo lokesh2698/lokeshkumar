@@ -20,6 +20,7 @@ steps:
       $sampletest = "lokeshkumar"
                 
       Write-Output "##vso[task.setvariable variable=SampleVariable;]$sampletest"
+      write-host($sampletest)
 
 - task: PowerShell@2
   displayName: Powershell-Value check
