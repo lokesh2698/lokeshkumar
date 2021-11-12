@@ -18,7 +18,6 @@ steps:
     targetType: inline
     script: 
       Start-Sleep(20)
-      write-host("waiting started")
 
    
 - task: PowerShell@2
