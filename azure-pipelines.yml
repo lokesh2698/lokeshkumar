@@ -16,8 +16,9 @@ steps:
   displayName: Delaying current task
   inputs: 
     targetType: inline
-    script: start-sleep -s 20
-            write-host("waiting started")
+    script: 
+      Start-Sleep(20)
+      write-host("waiting started")
 
    
 - task: PowerShell@2
