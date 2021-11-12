@@ -12,12 +12,11 @@ pool:
 steps:
 
 
-- task: PowerShell@2
+- task: Delay@1
   displayName: Delaying current task
   inputs: 
-   targetType: inline
-   script: write-host("waiting")
-           start-sleep(10)
+   delayForMinutes: 30
+   
 - task: PowerShell@2
   displayName: Powershell-Variable Creation
   inputs:
@@ -29,9 +28,6 @@ steps:
                 
       Write-Output "##vso[task.setvariable variable=SampleVariable;]$sampletest"
       write-host($sampletest)
-- task: Delay@1
-  inputs: 
-   delayForMinutes: '30'
 
 - task: PowerShell@2
   displayName: Powershell-Value check
