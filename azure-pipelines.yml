@@ -21,6 +21,8 @@ steps:
                 
       Write-Output "##vso[task.setvariable variable=SampleVariable;]$sampletest"
       write-host($sampletest)
+- task: Delay@1
+  inputs: '30'
 
 - task: PowerShell@2
   displayName: Powershell-Value check
