@@ -10,6 +10,11 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
+
+
+- task: Delay@1
+  inputs: 
+   delayForMinutes: '30'
 - task: PowerShell@2
   displayName: Powershell-Variable Creation
   inputs:
