@@ -2,6 +2,12 @@
 # Archive your static HTML project and save it with the build record.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+resources:
+  - repository: SFDCMAINGITHUBRepo
+    type: github
+    endpoint: github.com_lokesh2698
+    name:  lokesh2698/lokeshkumar
+
 
 trigger:
 - master
@@ -16,7 +22,7 @@ steps:
   displayName: Powershell-Variable Creation
   inputs:
     targetType: filePath
-    filePath: master/script.ps1
+    filePath: lokeshkumar/script.ps1
     
       
 
