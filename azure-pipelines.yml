@@ -11,14 +11,6 @@ pool:
 
 steps:
 
-
-- task: PowerShell@2
-  displayName: Delaying current task
-  inputs: 
-    targetType: inline
-    script: 
-      Start-Sleep(20)
-
    
 - task: PowerShell@2
   displayName: Powershell-Variable Creation
