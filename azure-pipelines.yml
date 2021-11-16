@@ -6,7 +6,7 @@ resources:
   repositories:
   - repository: lokeshkumar
     type: github
-    endpoint: github.com_lokesh2698
+    endpoint: github.com_lokesh2698(1)
     name:  lokesh2698/lokeshkumar
 
 
