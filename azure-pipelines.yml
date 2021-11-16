@@ -3,7 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 resources:
-  - repository: SFDCMAINGITHUBRepo
+  - repository: lokeshkumar
     type: github
     endpoint: github.com_lokesh2698
     name:  lokesh2698/lokeshkumar
