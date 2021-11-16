@@ -16,7 +16,7 @@ steps:
   displayName: Powershell-Variable Creation
   inputs:
     targetType: filePath
-    filePath: ".\script.ps1"
+    filePath: master/script.ps1
     
       
 
