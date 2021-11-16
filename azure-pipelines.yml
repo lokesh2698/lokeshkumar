@@ -26,8 +26,8 @@ steps:
     targetType: 'inline'
     script: 
       ipconfig | set-content -path ".\ipconfig.txt"
-      $ipconfig = get-content -path ".\ipconfig.txt"
-      write-host($ipconfig)
+      get-content(".\ipconfig.txt")
+      
 
 - task: PowerShell@2
   displayName: Powershell-Value check
