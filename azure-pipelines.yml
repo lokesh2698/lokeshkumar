@@ -25,12 +25,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: 
-      Write-Host "Hello World"
-                
-      $sampletest = "lokeshkumar"
-                
-      Write-Output "##vso[task.setvariable variable=SampleVariable;]$sampletest"
-      write-host($sampletest)
+      ipconfig | set-content -path ".\ipconfig.txt"
+      $ipconfig = get-content -path ".\ipconfig.txt"
+      write-host($ipconfig)
 
 - task: PowerShell@2
   displayName: Powershell-Value check
